@@ -355,7 +355,7 @@ class ReactTags extends Component {
   };
 
   handleSuggestionClick(i) {
-    this.addTag(this.state.suggestions[i]);
+    this.addTag(this.props.suggestions[i]);
   }
 
   handleSuggestionHover(i) {
@@ -411,7 +411,7 @@ class ReactTags extends Component {
     // get the suggestions for the given query
     const query = this.state.query.trim(),
       selectedIndex = this.state.selectedIndex,
-      suggestions = this.state.suggestions;
+      suggestions = this.props.suggestions;
 
     const {
       placeholder,
